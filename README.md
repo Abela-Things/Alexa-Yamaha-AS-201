@@ -7,6 +7,10 @@ This code works for both ESP32 and ESP8266 on ArduinoIDE 1.8.16 with the latest 
 
 You will need to change the Wifi SSID and password, and use the "search for devices" functionality of the Alexa App to set it up, the virtual device you create will appear as Philips Hue lights but you can program them to behave as anything other than a light through Alexa routines if needed.
 
+If you happen to have this kind of crappy IR emmiter (https://www.amazon.fr/iHaospace-Infrared-Transmitter-Receiver-Compatible/dp/B0893BD1V6/) to be used as a remote, you will have to desolder the IR LED resistance and replace it with a wire as it was not even powerful enough to work against the IRreceiver of the amplifier. (This is the risk for the ESP8266 or ESP32 as the maximum theorical current output of their GPIO pins is only 20mA and the LED may be drawing more from the data line in this circuit, but it didn't cause any issues for me.)
+
+Or you can try finding another one, or pairing a transistor and a powerful enough IR LED on your own circuit.
+
 ## functionalities:
 
 * Power On/OFF
